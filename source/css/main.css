@@ -1,0 +1,64 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+	color: #565a5f;
+}
+
+.nav-container,.maindiv,.navbox{
+	height: 100%
+}
+
+.logo{
+	clear: both; 
+	display: block; 
+	margin:auto; 
+}
+
+/*.localtionInfo{
+	display: inline;
+	margin-left: 20%;
+}*/
+
+.localtionText{
+	font-size: 0.6em;
+	color: #9a9ea3;
+}
+
+.follow{
+	text-align: center;
+}
+
+.socialIcon td{
+	width: 33%;
+}
+
+.socialIcon td a{
+	color: #898d92;
+}
+
+.socialIcon td a:hover{
+	color: #42A5F5;
+	cursor: pointer;
+}
+
+.navfoot{
+	font-size: 0.6em;
+	color: #9a9ea3;
+}
+
+.articleList{
+	height: 100%;
+	border-right:0.5px solid #e8e8e8;
+	overflow:scroll;
+}
+
+.listtitle{
+	color: #333;
+	font-size: 1.2em;
+	border-bottom: 1px solid #A2A6A5;
+}
+
+.listcontent{
+	font-size:0.8em;
+	padding-bottom: 20px;
+}

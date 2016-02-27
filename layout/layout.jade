@@ -3,6 +3,10 @@ html(lang="zh-CN")
 	head
 		include partial/head
 	body
-		include partial/nav
-		include partial/content
-		include partial/foot
+		.row.maindiv
+			.col.l2.z-depth-1.navbox
+				include partial/nav
+			.col.l4.m4.articleList
+				include partial/list
+			.col.l6.m8.s12
+				include partial/content
