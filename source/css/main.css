@@ -52,6 +52,11 @@ html,body{
 	overflow:scroll;
 }
 
+.content{
+	height: 100%;
+	overflow: scroll;
+}
+
 .listtitle{
 	color: #333;
 	font-size: 1.2em;
@@ -61,4 +66,16 @@ html,body{
 .listcontent{
 	font-size:0.8em;
 	padding-bottom: 20px;
+}
+
+.contenttitle{
+	color: #333;
+}
+
+.content-nav{
+	margin-right:1%;
+}
+
+.contenttime{
+	margin-left: 0.6%;
 }
