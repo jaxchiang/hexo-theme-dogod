@@ -4,7 +4,6 @@ mixin tags(tag)
 if is_home()
 	- var posts=page.posts.toArray()
 	- var indexpost=posts[0]
-	- console.log(indexpost)
 	.section
 		h5.contenttitle= indexpost.title
 		.section
@@ -22,6 +21,8 @@ if is_home()
 						li= index + ":" + val.name
 				h1= page.total
 				h1= page.current
+				h1= page.next_link
+				ul 
 				div
 					!=url_for(page.path)
 				h1=page.next

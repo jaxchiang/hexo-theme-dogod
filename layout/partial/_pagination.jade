@@ -1,14 +1,18 @@
+include ../mixins/m_pagination
+
 if page.total
 	.seciton
-		#pagination.valign-wrapper		
+		#pagination.valign-wrapper
 			ul.pagination
-				li.active
-					a(href='#!') 1
-				li.waves-effect.waves-bule
-					a(href='#!') 2
-				li.waves-effect.waves-bule
-					a(href='#!') 3
-				li.waves-effect.waves-bule
-					a(href='#!') 4
-				li.waves-effect.waves-bule
-					a(href='#!') 5
+				- var n = page.total
+				- var i = 1
+				if i != n
+					if page.current == 1
+						+pagination(url_for("index.html"),i++)(class="active")
+					else
+						+pagination(url_for("index.html"),i++)
+				while i<=n
+					if page.current == i
+						+pagination(url_for("/page/"+i),i++)(class="active")
+					else
+						+pagination(url_for("/page/"+i),i++)

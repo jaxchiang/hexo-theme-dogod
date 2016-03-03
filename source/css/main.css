@@ -89,6 +89,10 @@ html,body{
 	padding-bottom: 2%;
 }
 
+.pagination .waves-effect{
+	cursor: default;
+}
+
   /*
     When creating your CSS selector,
     change "brown" to something of your choosing
