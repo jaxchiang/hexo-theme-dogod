@@ -79,3 +79,22 @@ html,body{
 .contenttime{
 	margin-left: 0.6%;
 }
+
+.listrow{
+	width: 100%;
+}
+
+.pagination{
+	margin:0 auto;
+	padding-bottom: 2%;
+}
+
+  /*
+    When creating your CSS selector,
+    change "brown" to something of your choosing
+    */
+.waves-effect.waves-bule .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: #42A5F5;
+    }

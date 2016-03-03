@@ -1,0 +1,28 @@
+mixin tags(tag)
+	i.fa.fa-hashtag.listcontent.content-nav= tag
+
+if is_home()
+	- var posts=page.posts.toArray()
+	- var indexpost=posts[0]
+	- console.log(indexpost)
+	.section
+		h5.contenttitle= indexpost.title
+		.section
+			.span
+				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(indexpost.date,'MMMM Do YYYY, h:mm:ss a')
+				//- i.fa.fa-hashtag.listcontent.content-nav= indexpost.tags.toArray()[0].name
+				each tag in indexpost.tags.toArray()
+					+tags(tag.name)
+				i.fa.fa-commenting.listcontent.content-nav Comments
+		.divider
+		.section
+			div
+				ul
+					each val,index in site.tags.toArray() 
+						li= index + ":" + val.name
+				h1= page.total
+				h1= page.current
+				div
+					!=url_for(page.path)
+				h1=page.next
+				h1=page.prev

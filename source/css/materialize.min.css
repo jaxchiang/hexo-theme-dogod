@@ -2547,7 +2547,8 @@ video.responsive-video {
 }
 
 .pagination li.active {
-    background-color: #ee6e73
+    background-color: #42A5F5;
+    vertical-align:middle;
 }
 
 .pagination li.disabled a {

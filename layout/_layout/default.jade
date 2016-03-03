@@ -1,12 +1,13 @@
 doctype html
 html(lang="zh-CN")
 	head
-		include partial/head
+		include ../partial/_head
 	body
 		.row.maindiv
 			.col.l2.z-depth-1.navbox
-				include partial/nav
+				include ../partial/_nav
 			.col.l4.m4.articleList
-				include partial/list
+				block list
+				include ../partial/_pagination
 			.col.l6.m8.s12.content
-				include partial/content
+				block content

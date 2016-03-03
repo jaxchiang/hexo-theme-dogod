@@ -1,0 +1,8 @@
+include ../mixins/m_list.jade
+
+.row.listnavhead
+	.col.s12 
+		if is_home()
+			each post in page.posts.toArray()
+				+list(post.title,' '+full_date(post.date,'MMMM Do YYYY, h:mm:ss a'),strip_html(post.excerpt),url_for(post.path))
+

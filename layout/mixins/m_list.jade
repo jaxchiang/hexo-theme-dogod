@@ -1,0 +1,10 @@
+mixin list(title,time,brief,url)
+	.listrow
+		.section
+			a(href=url) 
+				span.listtitle= title
+			.section
+				.listcontent
+					!=brief
+			i.fa.fa-calendar.listcontent= time
+		.divider 
