@@ -16,3 +16,29 @@ if page.total
 						+pagination(url_for("/page/"+i),i++)(class="active")
 					else
 						+pagination(url_for("/page/"+i),i++)
+else
+	-
+		var posts = site.posts.sort('date', -1).toArray()
+		var postNumber = posts.length
+		var currentId=page._id
+		var indexNum=0
+		var i=1
+	each val,index in posts
+		if val._id==currentId
+			- indexNum=index+1
+	-
+		var pageNum=indexNum%10?(parseInt(indexNum/10))+1:indexNum/10  //数字10是系统默认设置每篇显示多少篇博文。
+		var totalPageNum=postNumber%10?(parseInt(postNumber/10))+1:postNumber/10
+	.seciton
+		#pagination.valign-wrapper
+			ul.pagination
+				if i != totalPageNum
+					if pageNum == 1
+						+pagination(url_for("index.html"),i++)(class="active")
+					else
+						+pagination(url_for("index.html"),i++)
+				while i<=totalPageNum
+					if pageNum == i
+						+pagination(url_for("/page/"+i),i++)(class="active")
+					else
+						+pagination(url_for("/page/"+i),i++)

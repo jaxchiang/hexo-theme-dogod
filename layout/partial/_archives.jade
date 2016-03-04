@@ -5,4 +5,26 @@ include ../mixins/m_list.jade
 		if is_home()
 			each post in page.posts.toArray()
 				+list(post.title,' '+full_date(post.date,'MMMM Do YYYY, h:mm:ss a'),strip_html(post.excerpt),url_for(post.path))
-
+		else if is_post()
+			-
+				var posts = site.posts.sort('date', -1).toArray()
+				var postNumber = posts.length
+				var currentId=page._id
+				var indexNum=0
+			each val,index in posts
+				if val._id==currentId
+					- indexNum=index+1
+			-
+				var pageNum=indexNum%10?(parseInt(indexNum/10))+1:indexNum/10  //数字10是系统默认设置每篇显示多少篇博文。
+				var totalPageNum=postNumber%10?(parseInt(postNumber/10))+1:postNumber/10
+				var startNum=(pageNum-1)*10
+			if totalPageNum - pageNum > 0
+				- for(var i=0;i<10;i++){
+					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'MMMM Do YYYY, h:mm:ss a'),strip_html(posts[startNum].excerpt),url_for(posts[startNum].path))
+					- startNum++
+				- } 
+			else
+				- for(var i=startNum;i<postNumber;i++){
+					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'MMMM Do YYYY, h:mm:ss a'),strip_html(posts[startNum].excerpt),url_for(posts[startNum].path))
+					- startNum++
+				-}

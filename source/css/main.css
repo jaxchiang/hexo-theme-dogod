@@ -49,12 +49,12 @@ html,body{
 .articleList{
 	height: 100%;
 	border-right:0.5px solid #e8e8e8;
-	overflow:scroll;
+	overflow:auto;
 }
 
 .content{
 	height: 100%;
-	overflow: scroll;
+	overflow: auto;
 }
 
 .listtitle{
