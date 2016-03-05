@@ -4,7 +4,7 @@ mixin list(title,time,brief,url)
 			a(href=url) 
 				span.listtitle= title
 			.section
-				.listcontent
+				.listcontent.markdown-body.truncate
 					!=brief
 			i.fa.fa-calendar.listcontent= time
 		.divider 

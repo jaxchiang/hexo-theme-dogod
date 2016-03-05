@@ -5,24 +5,24 @@ if is_home()
 	- var posts=page.posts.toArray()
 	- var indexpost=posts[0]
 	.section
-		h5.contenttitle= indexpost.title
+		h3.contenttitle= indexpost.title
 		.section
 			.span
-				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(indexpost.date,'MMMM Do YYYY, h:mm:ss a')
+				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(indexpost.date,'YYYY-MM-DD H:mm')
 				//- i.fa.fa-hashtag.listcontent.content-nav= indexpost.tags.toArray()[0].name
 				each tag in indexpost.tags.toArray()
 					+tags(tag.name)
 				i.fa.fa-commenting.listcontent.content-nav Comments
 		.divider
 		.section
-			div
+			div.markdown-body
 				!=indexpost.content
 else if is_post()
 	.section
 		h3.contenttitle= page.title
 		.section
 			.span
-				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(page.date,'MMMM Do YYYY, h:mm:ss a')
+				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(page.date,'YYYY-MM-DD H:mm')
 				//- i.fa.fa-hashtag.listcontent.content-nav= indexpost.tags.toArray()[0].name
 				each tag in page.tags.toArray()
 					+tags(tag.name)
