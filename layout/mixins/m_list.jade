@@ -1,6 +1,6 @@
 mixin list(title,time,brief,url)
-	.listrow
-		.section
+	.listrow.hoverable&attributes(attributes)
+		.section.listsection
 			a(href=url) 
 				span.listtitle= title
 			.section

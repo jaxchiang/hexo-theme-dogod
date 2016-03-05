@@ -1,10 +1,9 @@
 include ../mixins/m_list.jade
 
 .row.listnavhead
-	.col.s12 
 		if is_home()
-			each post in page.posts.toArray()
-				+list(post.title,' '+full_date(post.date,'MMMM Do YYYY, h:mm:ss a'),strip_html(post.excerpt),url_for(post.path))
+			each post,index in page.posts.toArray()
+				+list(post.title,' '+full_date(post.date,'MMMM Do YYYY, h:mm:ss a'),strip_html(post.excerpt),url_for(post.path))(class=index==0?"slected":"")
 		else if is_post()
 			-
 				var posts = site.posts.sort('date', -1).toArray()
@@ -20,11 +19,11 @@ include ../mixins/m_list.jade
 				var startNum=(pageNum-1)*10
 			if totalPageNum - pageNum > 0
 				- for(var i=0;i<10;i++){
-					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'MMMM Do YYYY, h:mm:ss a'),strip_html(posts[startNum].excerpt),url_for(posts[startNum].path))
+					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'MMMM Do YYYY, h:mm:ss a'),strip_html(posts[startNum].excerpt),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
 					- startNum++
 				- } 
 			else
 				- for(var i=startNum;i<postNumber;i++){
-					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'MMMM Do YYYY, h:mm:ss a'),strip_html(posts[startNum].excerpt),url_for(posts[startNum].path))
+					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'MMMM Do YYYY, h:mm:ss a'),strip_html(posts[startNum].excerpt),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
 					- startNum++
 				-}
