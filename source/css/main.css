@@ -2,6 +2,7 @@ html,body{
 	height: 100%;
 	overflow: hidden;
 	color: #565a5f;
+    font-family: "Signika","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 }
 
 .nav-container,.maindiv,.navbox{
@@ -68,13 +69,19 @@ html,body{
 	padding-bottom: 20px;
 }
 
+.content .fa-hashtag{
+    color: #0d587a;
+}
+
 .contenttitle{
 	color: #333;
+    margin: 0;
 }
 
 .content-nav{
 	margin-right:1%;
 }
+
 
 .contenttime{
 	margin-left: 0.6%;
@@ -112,7 +119,7 @@ figure{
 	overflow-x: auto;
 }
 .gutter{
-	width: 10px;
+    width: 10px;
 }
 /*.gutter,.code{
 	padding: 0;
@@ -125,8 +132,6 @@ figure{
 .markdown-body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  color: #333;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   line-height: 1.6;
   word-wrap: break-word;
@@ -541,13 +546,9 @@ figure{
 
 .markdown-body table th,
 .markdown-body table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
 }
 
 .markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
 }
 
 .markdown-body table tr:nth-child(2n) {
@@ -592,12 +593,11 @@ figure{
 
 .markdown-body .highlight pre,
 .markdown-body pre {
-  padding: 16px;
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
   border-radius: 3px;
+  padding: 5px;
 }
 
 .markdown-body .highlight pre {
@@ -774,5 +774,74 @@ figure{
 
 .markdown-body ul li {
     list-style-type: disc;
+}
+
+.main h2:after, 
+.main h3:after, 
+.main h4:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    border-radius: 2px;
+    box-shadow: 
+        inset 0 1px 1px rgba(0,0,0,0.5), 
+        0 1px 1px rgba(255,255,255,0.3);
+}
+
+.main h2:after { background: #0AF; }
+.main h3:after { background: #3BF; }
+.main h4:after { background: #6Cf; }
+
+.main h1 {
+    font-size: 36px;
+    line-height: 40px;
+    margin: 1em 0 .6em 0;
+    font-weight: normal;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    color: #6Cf;
+}
+
+.main h2 {
+    margin: 1em 0 .6em 0;
+    padding: 0 0 0 20px;
+    font-weight: normal;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.main h3 {
+    margin: 1em 0 .6em 0;
+    padding: 0 0 0 20px;
+    font-weight: normal;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.main h4 { 
+    margin: 1em 0 .6em 0;
+    padding: 0 0 0 20px;
+    font-weight: normal;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    position: relative;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: 'Questrial', sans-serif;
 }
 
