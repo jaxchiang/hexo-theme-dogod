@@ -1,5 +1,6 @@
-mixin tags(tag)
-	i.fa.fa-hashtag.listcontent.content-nav= tag
+include ../mixins/m_tags
+include ../mixins/m_comment
+include comment
 
 if is_home()
 	- var posts=page.posts.toArray()
@@ -17,6 +18,8 @@ if is_home()
 		.section
 			div.markdown-body
 				!=indexpost.content
+		.divider
+		+comment(indexpost)
 else if is_post()
 	.section
 		h3.contenttitle= page.title
@@ -31,4 +34,6 @@ else if is_post()
 		.section
 			div.markdown-body
 				!=page.content
+		.divider
+		+comment(page)
 

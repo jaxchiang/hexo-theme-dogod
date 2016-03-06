@@ -127,9 +127,19 @@ word-wrap: break-word;
 figure{
     overflow-x: auto;
 }
+
 .gutter{
     width: 10px;
 }
+
+.ds-meta{
+  display: none;
+}
+
+#ds-smilies-tooltip ul.ds-smilies-tabs{
+  height: 140px !important;
+}
+
 /*.gutter,.code{
     padding: 0;
 }*/
