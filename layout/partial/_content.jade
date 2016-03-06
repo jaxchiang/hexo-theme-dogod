@@ -13,7 +13,8 @@ if is_home()
 				//- i.fa.fa-hashtag.listcontent.content-nav= indexpost.tags.toArray()[0].name
 				each tag in indexpost.tags.toArray()
 					+tags(tag.name)
-				i.fa.fa-commenting.listcontent.content-nav Comments
+				i.fa.fa-commenting.listcontent.content-nav.go2comments 
+					a(href="#article-comment") Comments
 		.divider
 		.section
 			div.markdown-body
