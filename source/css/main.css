@@ -49,7 +49,7 @@ html,body{
 
 .articleList{
     height: 100%;
-    border-right:0.5px solid #e8e8e8;
+    border-right:1px solid #e8e8e8;
     overflow:auto;
     padding: 0 !important;
 }
@@ -144,6 +144,29 @@ figure{
   color:#42A5F5 ;
 }
 
+::-webkit-scrollbar{ 
+    display: none; 
+}
+
+.pinBox {
+  width: 100%;
+  z-index: 999;
+  background-color: #ffffff;
+}
+ 
+/* OR you can also style plugin's class .sticking, 
+that way you can style it differently when it's sticking */
+.sticking {
+  width: 56.79%;
+  z-index: 999;
+  background-color: #ffffff;
+}           
+
+.process{
+background-color: #42A5F5;
+height: 5px;
+width: 0px;
+}
 
 /**
  *------------------------------MarkDown Style---------------------------------
