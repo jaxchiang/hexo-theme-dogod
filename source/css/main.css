@@ -1,56 +1,56 @@
 html,body{
-	height: 100%;
-	overflow: hidden;
-	color: #565a5f;
+    height: 100%;
+    overflow: hidden;
+    color: #565a5f;
     font-family: "Signika","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 }
 
 .nav-container,.maindiv,.navbox{
-	height: 100%
+    height: 100%
 }
 
 .logo{
-	clear: both; 
-	display: block; 
-	margin:auto; 
+    clear: both; 
+    display: block; 
+    margin:auto; 
 }
 
 /*.localtionInfo{
-	display: inline;
-	margin-left: 20%;
+    display: inline;
+    margin-left: 20%;
 }*/
 
 .localtionText{
-	font-size: 0.6em;
-	color: #9a9ea3;
+    font-size: 0.6em;
+    color: #9a9ea3;
 }
 
 .follow{
-	text-align: center;
+    text-align: center;
 }
 
 .socialIcon td{
-	width: 33%;
+    width: 33%;
 }
 
 .socialIcon td a{
-	color: #898d92;
+    color: #898d92;
 }
 
 .socialIcon td a:hover{
-	color: #42A5F5;
-	cursor: pointer;
+    color: #42A5F5;
+    cursor: pointer;
 }
 
 .navfoot{
-	font-size: 0.6em;
-	color: #9a9ea3;
+    font-size: 0.6em;
+    color: #9a9ea3;
 }
 
 .articleList{
-	height: 100%;
-	border-right:0.5px solid #e8e8e8;
-	overflow:auto;
+    height: 100%;
+    border-right:0.5px solid #e8e8e8;
+    overflow:auto;
     padding: 0 !important;
 }
 
@@ -59,19 +59,19 @@ html,body{
 }
 
 .content{
-	height: 100%;
-	overflow-y: auto;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .listtitle{
-	color: #333;
-	font-size: 1.2em;
-	border-bottom: 1px solid #A2A6A5;
+    color: #333;
+    font-size: 1.2em;
+    border-bottom: 1px solid #A2A6A5;
 }
 
 .listcontent{
-	font-size:0.8em;
-	padding-bottom: 20px;
+    font-size:0.8em;
+    padding-bottom: 20px;
 }
 
 .content .fa-hashtag{
@@ -79,21 +79,21 @@ html,body{
 }
 
 .contenttitle{
-	color: #333;
+    color: #333;
     margin: 0;
 }
 
 .content-nav{
-	margin-right:1%;
+    margin-right:1%;
 }
 
 
 .contenttime{
-	margin-left: 0.6%;
+    margin-left: 0.6%;
 }
 
 .listrow{
-	width: 100%;
+    width: 100%;
 }
 
 .slected{
@@ -101,12 +101,12 @@ html,body{
 }
 
 .pagination{
-	margin:0 auto;
-	padding-bottom: 2%;
+    margin:0 auto;
+    padding-bottom: 2%;
 }
 
 .pagination .waves-effect{
-	cursor: default;
+    cursor: default;
 }
 
   /*
@@ -125,13 +125,13 @@ word-wrap: break-word;
 }*/
 
 figure{
-	overflow-x: auto;
+    overflow-x: auto;
 }
 .gutter{
     width: 10px;
 }
 /*.gutter,.code{
-	padding: 0;
+    padding: 0;
 }*/
 @font-face {
   font-family: octicons-link;
@@ -529,8 +529,8 @@ figure{
 
 .markdown-body blockquote {
   padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
+  color: #969896;
+  border-left: 4px solid #42A5F5;
 }
 
 .markdown-body blockquote>:first-child {
