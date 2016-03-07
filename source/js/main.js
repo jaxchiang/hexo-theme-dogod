@@ -2,6 +2,9 @@ $(document).ready(function() {
     $('.highlight').each(function(i, block) {
         hljs.highlightBlock(block);
     });
+    $('.markdown-body pre').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
     $('.pinBox').stickMe();
 });
 
@@ -24,8 +27,8 @@ $(function() {
     });
 });
 
-hljs.configure({ useBR: true });
+hljs.configure({});
 
-Pace.on("hide",function(){
-	$(".maindiv").removeClass('hide');
+Pace.on("hide", function() {
+    $(".maindiv").removeClass('hide');
 })

@@ -11,21 +11,21 @@
     $.fn.stickMe = function(options) {
         // Assigning variables
         var $window = $(".content"),
-            $document = $(".content .section"),
+            $document = $(document),
             $elemTopOffset,
             $body = $('body'),
             position = 0,
             $elem = this,
-            $elemHeight = $elem.innerHeight(),
+            $elemHeight = 122,
             $win_center = $window.height() / 2,
             $pos,
             settings = $.extend({
-                transitionDuration: 500,
+                transitionDuration: 600,
                 shadow: false,
                 shadowOpacity: 0.3,
                 animate: true,
                 triggerAtCenter: true,
-                topOffset: 0,
+                topOffset: $elemHeight,
                 transitionStyle: 'fade',
                 stickyAlready: false
             }, options);
@@ -79,7 +79,9 @@
                 .addClass('sticking')
                 .css('position', 'fixed')
                 .css('top', '0');
-            $(".content").css('padding-top', $elemHeight);
+            $window.css('padding-top', $elemHeight);
+
+            console.log($elemHeight);
         }
 
         function unstick() {
@@ -90,10 +92,10 @@
                 .removeClass('sticking')
                 .show()
                 .css('position', 'relative');
-            $(".content").css('padding-top', '0');
+            $window.css('padding-top', '0');
         }
-        $(".content").scroll(function() {
-            $pos = $(".content").scrollTop();
+        $window.scroll(function() {
+            $pos = $window.scrollTop();
             if ($pos === 0) {
                 position = 0;
                 $elem.trigger('top-reached');
@@ -108,7 +110,7 @@
                     stick();
                 }
             }
-            if ($pos + $(".content").height() > $window.height() - 1) {
+            if ($pos + $window.height() > $document.height() - 1) {
                 $elem.trigger('bottom-reached');
             }
             if (settings.triggerAtCenter === true) {
