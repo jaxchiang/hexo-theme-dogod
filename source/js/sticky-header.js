@@ -80,8 +80,6 @@
                 .css('position', 'fixed')
                 .css('top', '0');
             $window.css('padding-top', $elemHeight);
-
-            console.log($elemHeight);
         }
 
         function unstick() {

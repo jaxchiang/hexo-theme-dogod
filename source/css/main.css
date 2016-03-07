@@ -1117,6 +1117,7 @@ that way you can style it differently when it's sticking */
 
 .markdown-body .highlight {
     margin: 0 !important;
+    border-radius: 3px;
 }
 
 .markdown-body .highlight pre,
