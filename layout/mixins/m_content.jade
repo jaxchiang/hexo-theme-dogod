@@ -1,0 +1,16 @@
+mixin content(post)
+	.content-head.pinBox
+		h3.contenttitle= post.title
+		.section
+			.span
+				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(post.date,'YYYY-MM-DD H:mm')
+				each tag in post.tags.toArray()
+					+tags(tag)
+				i.fa.fa-commenting.listcontent.content-nav.go2comments 
+					a(href="#article-comment") Comments
+		.divider
+		.process
+	.section
+		div.markdown-body
+			!=post.content
+	.divider

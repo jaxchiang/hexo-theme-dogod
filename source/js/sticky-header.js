@@ -10,8 +10,8 @@
     "use strict";
     $.fn.stickMe = function(options) {
         // Assigning variables
-        var $window = $(window),
-            $document = $(document),
+        var $window = $(".content"),
+            $document = $(".content .section"),
             $elemTopOffset,
             $body = $('body'),
             position = 0,
@@ -20,7 +20,7 @@
             $win_center = $window.height() / 2,
             $pos,
             settings = $.extend({
-                transitionDuration: 0,
+                transitionDuration: 500,
                 shadow: false,
                 shadowOpacity: 0.3,
                 animate: true,

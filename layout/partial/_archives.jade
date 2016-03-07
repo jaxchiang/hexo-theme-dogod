@@ -28,3 +28,6 @@ include ../mixins/m_list.jade
 					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'YYYY-MM-DD H:mm'),strip_html(posts[startNum].excerpt?posts[startNum].excerpt:posts[startNum].content),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
 					- startNum++
 				-}
+		else 
+			each post,index in page.posts.toArray()
+				+list(post.title,' '+full_date(post.date,'YYYY-MM-DD H:mm'),strip_html(post.excerpt?post.excerpt:post.content),url_for(post.path))(class=index==0?"slected":"")

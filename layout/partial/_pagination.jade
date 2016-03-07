@@ -6,11 +6,10 @@ if page.total
 			ul.pagination
 				- var n = page.total
 				- var i = 1
-				if i != n
-					if page.current == 1
-						+pagination(url_for("index.html"),i++)(class="active")
-					else
-						+pagination(url_for("index.html"),i++)
+				if page.current == 1
+					+pagination(url_for("index.html"),i++)(class="active")
+				else
+					+pagination(url_for("index.html"),i++)
 				while i<=n
 					if page.current == i
 						+pagination(url_for("/page/"+i),i++)(class="active")
@@ -32,11 +31,10 @@ else
 	.seciton
 		#pagination.valign-wrapper
 			ul.pagination
-				if i != totalPageNum
-					if pageNum == 1
-						+pagination(url_for("index.html"),i++)(class="active")
-					else
-						+pagination(url_for("index.html"),i++)
+				if pageNum == 1
+					+pagination(url_for("index.html"),i++)(class="active")
+				else
+					+pagination(url_for("index.html"),i++)
 				while i<=totalPageNum
 					if pageNum == i
 						+pagination(url_for("/page/"+i),i++)(class="active")

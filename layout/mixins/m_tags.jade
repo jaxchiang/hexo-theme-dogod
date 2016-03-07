@@ -1,2 +1,3 @@
 mixin tags(tag)
-	i.fa.fa-hashtag.listcontent.content-nav= tag
+	i.fa.fa-hashtag.listcontent.content-nav
+		a(href=url_for(tag.path))=tag.name
