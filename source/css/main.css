@@ -662,7 +662,6 @@ that way you can style it differently when it's sticking */
 .markdown-body {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    font-size: 16px;
     line-height: 1.6;
     word-wrap: break-word;
 }
