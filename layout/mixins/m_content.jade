@@ -3,7 +3,7 @@ mixin content(post)
 		h4.contenttitle= post.title
 		.section
 			.span
-				i.fa.fa-calendar.listcontent.content-nav.contenttime= full_date(post.date,'YYYY-MM-DD H:mm')
+				i.fa.fa-calendar.listcontent.content-nav.contenttime= "Created at: "+full_date(post.date,'YYYY-MM-DD H:mm')
 				each tag in post.tags.toArray()
 					+tags(tag)
 				i.fa.fa-commenting.listcontent.content-nav.go2comments 

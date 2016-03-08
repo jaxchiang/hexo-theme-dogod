@@ -3,7 +3,7 @@ include ../mixins/m_list.jade
 .row.listnavhead
 		if is_home()
 			each post,index in page.posts.toArray()
-				+list(post.title,' '+full_date(post.date,'YYYY-MM-DD H:mm'),strip_html(post.excerpt?post.excerpt:post.content),url_for(post.path))(class=index==0?"slected":"")
+				+list(post.title,' '+full_date(post.date,'YYYY-MM-DD H:mm'),truncate(post.excerpt?post.excerpt:post.content,{length:115}),url_for(post.path))(class=index==0?"slected":"")
 		else if is_post()
 			-
 				var posts = site.posts.sort('date', -1).toArray()
@@ -20,14 +20,14 @@ include ../mixins/m_list.jade
 				var startNum=(pageNum-1)*perPage
 			if totalPageNum - pageNum > 0
 				- for(var i=0;i<perPage;i++){
-					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'YYYY-MM-DD H:mm'),strip_html(posts[startNum].excerpt?posts[startNum].excerpt:posts[startNum].content),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
+					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'YYYY-MM-DD H:mm'),truncate(posts[startNum].excerpt?posts[startNum].excerpt:posts[startNum].content,{length:115}),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
 					- startNum++
 				- } 
 			else
 				- for(var i=startNum;i<postNumber;i++){
-					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'YYYY-MM-DD H:mm'),strip_html(posts[startNum].excerpt?posts[startNum].excerpt:posts[startNum].content),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
+					+list(posts[startNum].title,' '+full_date(posts[startNum].date,'YYYY-MM-DD H:mm'),truncate(posts[startNum].excerpt?posts[startNum].excerpt:posts[startNum].content,{length:115}),url_for(posts[startNum].path))(class=indexNum-1==startNum?"slected":"")
 					- startNum++
 				-}
 		else 
 			each post,index in page.posts.toArray()
-				+list(post.title,' '+full_date(post.date,'YYYY-MM-DD H:mm'),strip_html(post.excerpt?post.excerpt:post.content),url_for(post.path))(class=index==0?"slected":"")
+				+list(post.title,' '+full_date(post.date,'YYYY-MM-DD H:mm'),truncate(post.excerpt?post.excerpt:post.content,{length:115}),url_for(post.path))(class=index==0?"slected":"")

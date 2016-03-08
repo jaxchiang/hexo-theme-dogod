@@ -1,10 +1,22 @@
-mixin list(title,time,brief,url)
+mixin list-tag(tag)
+	i.fa.fa-hashtag.listcontent.list-tag= tag
+mixin list(title,time,brief,url,tags)
 	.listrow.hoverable&attributes(attributes)
 		.section.listsection
 			a(href=url) 
 				span.listtitle= title
 			.section
-				.listcontent.markdown-body.truncate
+				.listcontent.markdown-body
 					!=brief
-			i.fa.fa-calendar.listcontent= time
+			.listInfo
+				i.fa.fa-calendar.listcontent.list-calendar= time
 		.divider 
+
+
+
+
+				//- ul.tags.tagblue
+				//- 	li
+				//- 		a(href="#")
+				//- 			| Javascript
+				//- 			span 16
