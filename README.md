@@ -16,7 +16,7 @@
 
 
 2.使用Git安装
-`$ git clone https://github.com/Jianglinyuan/hexo-theme-dogod themes/yilia`
+`$ git clone https://github.com/Jianglinyuan/hexo-theme-dogod themes/dogod`
 ####配置
 修改Hexo根目录下的`_config.yml`:`theme:dogod`
 ##二、主题配置文件
