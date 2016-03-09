@@ -3,41 +3,44 @@
 		.row
 			.col.s12
 				.section
-					img.circle.center-align.logo(src=url_for("images/logo.png"),width='100px',height='100px')
-					h5.center-align
-						|Dogod
-					h6.center-align Keep coding,go up everday!
+					a(href=url_for("index.html")).logodiv.center-align
+						img.circle.logo.center-align(src=url_for("images/logo.png"),width='100px',height='100px')
+					h5.center-align= theme.name
+					h6.center-align=theme.signature
 					p.localtionInfo.center-align
-						i.fa.fa-location-arrow.localtionText GuangZhou,China
+						i.fa.fa-location-arrow.localtionText=theme.location
 					.section.follow
-						a.waves-effect.waves-light.btn.blue.lighten-1 FOLLOW
-				.divider
-				.section
+						a.waves-effect.waves-light.btn.blue.lighten-1.dropdown-button.nav-menu(data-activates='dropdown-list') Menu
+						ul#dropdown-list.dropdown-content
+							li.nav-home
+								a(href="index.html") Home
+							li.nav-tags
+								a Tags
+							li.nav-about
+								a About Me
+				.divider			
+				.section.social
 					table.centered
 						tbody
 							tr.socialIcon
 								td 
-									a
+									a(href=theme.github)
 										i.fa.fa-github-square.fa-2x
 								td 
-									a
+									a(href=theme.weibo)
 										i.fa.fa-weibo.fa-2x
 								td
-									a
-										i.fa.fa-twitter.fa-2x
-							tr.socialIcon
-								td
-									a
+									a(href="mailto:"+theme.email)
 										i.fa.fa-envelope-o.fa-2x
-								td
-									a
-										i.fa.fa-facebook-official.fa-2x
-								td
-									a
-										i.fa.fa-stack-overflow.fa-2x
-					.divider
-					.section
-						.center-align.navfoot ©Copyright 2015-2016 Dogod
-
-
-
+				.section.allTags.hide
+					ul.tags.tagblue.center-align
+						each tag in site.tags.toArray()
+							li
+								a(href=url_for(tag.path))
+									!=tag.name
+									span!=tag.length
+				.section.aboutMe.center-align.hide
+					!=theme.about
+				
+				.center-align.navfoot ©Copyright 2015-2016 Dogod
+				.section

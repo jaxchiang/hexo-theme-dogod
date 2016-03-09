@@ -8179,8 +8179,6 @@ button.btn-floating {
 
 .dropdown-content li>a,
 .dropdown-content li>span {
-    font-size: 16px;
-    color: #26a69a;
     display: block;
     line-height: 22px;
     padding: 14px 16px
@@ -9195,10 +9193,10 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     top: -14px;
     font-size: 0.8rem
 }
-
+/*
 select {
     display: none
-}
+}*/
 
 select.browser-default {
     display: block

@@ -6,6 +6,29 @@ $(document).ready(function() {
         hljs.highlightBlock(block);
     });
     $('.pinBox').stickMe();
+
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrain_width: true, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: false, // Displays dropdown below the button
+    });
+
+    $(".nav-tags").click(function() {
+        $(".social").addClass("hide");
+        $(".aboutMe").addClass('hide')
+        $(".nav-menu").html("Tags");
+        $(".allTags").removeClass('hide')
+    });
+
+    $(".nav-about").click(function(){
+        $(".social").addClass("hide");        
+        $(".allTags").addClass("hide");  
+        $(".aboutMe").removeClass("hide");                              
+        $(".nav-menu").html("About");
+    })
 });
 
 $(function() {
@@ -24,6 +47,15 @@ $(function() {
 
     $(window).resize(function() {
         scroll_fn();
+    });
+
+    $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrain_width: true, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: true // Displays dropdown below the button
     });
 });
 

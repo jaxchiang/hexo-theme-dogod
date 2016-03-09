@@ -15,9 +15,11 @@ body {
 .logo {
     clear: both;
     display: block;
-    margin: auto;
+    margin: 0 auto;
 }
-
+.logodiv{
+    display: block;
+}
 .localtionText {
     font-size: 0.6em;
     color: #9a9ea3;
@@ -1412,7 +1414,7 @@ that way you can style it differently when it's sticking */
 .tags li {
   position: relative;
   float: left;
-  margin: 0 0 0 8px;
+  margin: 0 0 8px 12px;
 }
 .tags li:active {
   margin-top: 1px;
@@ -1508,3 +1510,8 @@ that way you can style it differently when it's sticking */
   background-image: -o-linear-gradient(top, #6aaeda, #4298d0);
   background-image: linear-gradient(to bottom, #6aaeda, #4298d0);
 }
+
+/**
+ * Drop Down CSS
+ */
+

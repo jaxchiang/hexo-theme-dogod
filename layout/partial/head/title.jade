@@ -8,7 +8,7 @@ else
   if is_category()
     - title.push(page.category)
   else if is_tag()
-    - title.push(page.tag)
+    - title.push("Tag:"+page.tag)
   else if is_archive()
     if page.year
       - title.push(__('archive_something', page.year + (page.month ? '/' + page.month : '')))
