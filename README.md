@@ -13,6 +13,8 @@
 ####安装
 1.先安装hexo的jade渲染插件
 `npm install hexo-renderer-jade --save`
+
+
 2.使用Git安装
 `$ git clone https://github.com/Jianglinyuan/hexo-theme-dogod themes/yilia`
 ####配置
