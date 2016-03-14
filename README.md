@@ -1,7 +1,7 @@
 #Hexo-theme-Dogod
 一个用[Jade](http://http://jade-lang.com)写的[Hexo](https://hexo.io)模板。采用了单页三栏、简约的模式,整体使用了蓝色与灰色的基调。
 
-[[Demo](jianglinyuan.github.io)]
+[[Demo](https://jianglinyuan.github.io)]
 
 **不**支持也**不会**支持**`IE`**浏览器。
 
